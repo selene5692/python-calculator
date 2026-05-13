@@ -26,6 +26,9 @@ jobs:
         
       - name: Lint Code (Ruff)
         run: python -m ruff check .
+
+      - name: Security Scan (Bandit)
+        run: python -m bandit -r src/
         
       - name: Run Tests (Pytest)
         run: python -m pytest

@@ -1,0 +1,20 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: Simulate Deployment
+        run: |
+          echo "🚀 Simulating deployment to production server..."
+          echo "✅ Connecting to AWS/GCP/Azure..."
+          echo "✅ Uploading calc.py..."
+          echo "🎉 Deployment successful!"
+    
